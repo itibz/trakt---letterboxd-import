@@ -15,8 +15,8 @@ import datetime
 
 import urllib
 
-CLIEN_ID= '2bf605963c77469b2d4fe3b8c7955b5013331997c3e19d0256349fbf538322b4'
-CLIEN_SECRECT = '46d78ee1d82aa06aaf21a0cc32e3ac031077e8533c43ba9298152b360798a688'
+CLIENT_ID= '2bf605963c77469b2d4fe3b8c7955b5013331997c3e19d0256349fbf538322b4'
+CLIENT_SECRET = '46d78ee1d82aa06aaf21a0cc32e3ac031077e8533c43ba9298152b360798a688'
 CODE = '44E62062'
 
 
@@ -47,8 +47,8 @@ def authorize(auth_code, grant_type='authorization_code', code=CODE):
 
         values = {
             "code": code,
-            "client_id": CLIEN_ID,
-            "client_secret": CLIEN_SECRECT,
+            "client_id": CLIENT_ID,
+            "client_secret": CLIENT_SECRET,
             "redirect_uri": "urn:ietf:wg:oauth:2.0:oob",
             "grant_type": "authorization_code"
         }
@@ -57,8 +57,8 @@ def authorize(auth_code, grant_type='authorization_code', code=CODE):
 
         values = {
             "refresh_token": code,
-            "client_id": CLIEN_ID,
-            "client_secret": CLIEN_SECRECT,
+            "client_id": CLIENT_ID,
+            "client_secret": CLIENT_SECRET,
             "redirect_uri": "urn:ietf:wg:oauth:2.0:oob",
             "grant_type": "refresh_token"
         }
