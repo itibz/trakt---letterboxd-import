@@ -20,10 +20,6 @@ CLIEN_SECRECT = '46d78ee1d82aa06aaf21a0cc32e3ac031077e8533c43ba9298152b360798a68
 CODE = '44E62062'
 
 
-# Optional: Use an API for obtaining imdb id
-CHECK_IMDB_ID = False # Useful for clearly identifying the movie in case the title at letterboxd is dfferent from imdb
-API_URL_FOR_IMDB_ID = 'http://www.omdbapi.com/?apikey=YOURAPIKEY&t=' #Fill in your Api key if you want to use omdbapi
-
 def check_authentication():
     if os.path.isfile('auth.json'):
         with open('auth.json') as auth_file:
